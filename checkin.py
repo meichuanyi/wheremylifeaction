@@ -6,7 +6,7 @@ headers = {
 }
 session = requests.Session()
 
-url = 'http://wheremylife.cn/user/login'
+url = 'https://wheremylife.cn/1.0/user/login'
 
 payload = {
     'email': input(),
@@ -18,5 +18,5 @@ headers = {
     'Referer': 'http://wheremylife.cn/home.htm'
 }
 s = session.post(url, data=payload, headers=headers)
-s2 = session.post('http://wheremylife.cn/user/resetBook', headers=headers)
-print('打卡成功！')
+s2 = session.post('https://wheremylife.cn/1.0/user/resetBook', headers=headers)
+print(s2.text)
